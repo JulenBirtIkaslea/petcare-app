@@ -1,0 +1,6 @@
+-- Lanzador para psql. No usar --single-transaction: CREATE DATABASE lo impide.
+\set ON_ERROR_STOP on
+\ir 00_crear_base_de_datos.sql
+\connect gestion_mascotas
+\ir 01_crear_esquema.sql
+\ir 02_catalogo_especies.sql
